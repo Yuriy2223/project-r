@@ -1,0 +1,540 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  margin: 0;
+  /* padding: 0; */
+  /* list-style: none; */
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --body-background: #bfbaba;
+  --block-1-background: #1e2939;
+  --block-2-background: #ffffff;
+
+  --color-text-blok-1-light: #ffffff;
+  --color-text-blok-1-gray: #e4dddd;
+  --color-text-block-1-dark: #a8a8a8;
+
+  --color-text-block-2-light: #595959;
+  --color-text-block-2-black: #000000;
+  --color-text-block-2-link: #503f34;
+
+  /* --color-languages-norm: #0f54bd; */
+  /* --color-languages-dark: #1b355c; */
+  --color-languages-dark: #b14a25;
+  --color-languages-norm: #c8cbce;
+
+  --background-languages-bg-active: #b14a25;
+  /* --background-languages-bg-hover: #9b3f1d; */
+
+  --color-decorative: #fb6d3a;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  min-width: 280px;
+  max-width: 375px;
+  margin: 20px auto;
+  background-color: var(--block-2-background);
+  /* box-shadow: 6px 6px 20px 0 rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 30px 0 rgba(161, 159, 159, 0.849);
+}
+
+.container_header {
+  padding: 30px 10px 20px;
+  background-color: var(--block-1-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header_resume-name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--color-text-blok-1-light);
+  margin-bottom: 16px;
+}
+
+.header_language-text {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--color-text-blok-1-light);
+  margin-bottom: 8px;
+}
+
+.header_language-list {
+  list-style: none;
+  display: flex;
+  border-radius: 60px;
+  padding: 4px 4px;
+  background-color: var(--color-languages-norm);
+  /* width: 192px; */
+  width: 230px;
+}
+
+.header_language_item {
+  width: 50%;
+}
+
+.header_language-link {
+  /* color: var(--color-text-blok-1-light); */
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+
+  border-radius: 60px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease;
+}
+
+.header_language-link:hover,
+.header_language-link:focus {
+  color: #fdfdfd; /**/
+  background-color: var(--color-languages-dark);
+  /* transform: scale(1.2); */
+  transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease;
+}
+
+.is-active-language {
+  background-color: var(--background-languages-bg-active);
+  transition: background-color 0.5s ease;
+}
+
+.header_language-link.is-active-language,
+.header_language-link.is-active-language:hover,
+.header_language-link.is-active-language:focus {
+  color: #ffffff; /**/
+  background-color: var(--background-languages-bg-active);
+  transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease;
+}
+
+.container_hero {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--block-1-background);
+}
+
+.container_photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-image: url("/img/приклад2x.jpg");
+  background-size: 100% 100%;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .container_photo {
+    background-image: url("/img/приклад4x.jpg");
+  }
+}
+
+.container_contacts {
+  padding: 10px;
+}
+
+.contacts-inf {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 22px;
+  color: var(--color-text-blok-1-light);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.address-list {
+  padding-left: 25px;
+}
+
+.address-item {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-decorative);
+  margin-bottom: 8px;
+}
+
+.address-link {
+  display: inline-block;
+  color: var(--color-text-block-1-dark);
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--color-text-blok-1-light);
+  transform: scale(1.2);
+}
+
+.container_contacts-zp {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-text-block-1-dark);
+}
+
+.container_tech-skills {
+  padding: 0 10px;
+}
+
+.tech-skills-title {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 22px;
+  color: var(--color-text-blok-1-light);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.tech-skills-list {
+  padding-left: 25px;
+}
+
+.tech-skills-item {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-decorative);
+  margin-bottom: 8px;
+}
+
+.tech-skills-span {
+  color: var(--color-text-block-1-dark);
+}
+
+.container_soft-skills {
+  padding: 0 10px;
+}
+
+.soft-skills-title {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 22px;
+  color: var(--color-text-blok-1-light);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.soft-skills-list {
+  padding-left: 25px;
+}
+
+.soft-skills-item {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-decorative);
+  margin-bottom: 8px;
+}
+
+.soft-skills-span {
+  color: var(--color-text-block-1-dark);
+}
+
+.container_languages {
+  padding: 0 10px;
+}
+
+.languages-title {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 22px;
+  color: var(--color-text-blok-1-light);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.languages-list {
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+
+.languages-item {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-decorative);
+  margin-bottom: 8px;
+}
+
+.soft-skills-span {
+  color: var(--color-text-block-1-dark);
+}
+
+.container_junior {
+  background-color: var(--block-2-background);
+}
+
+.junior-container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.junior_name {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.3;
+  color: var(--color-text-block-2-black);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* text-shadow: 3px 5px 4px rgba(53, 51, 51, 0.445);  */
+}
+
+.junior_work {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 22px;
+  text-align: center;
+  color: var(--color-text-block-2-light);
+  /* text-shadow: 3px 4px 4px rgba(105, 103, 103, 0.438);  */
+}
+/*=====================видали====================*/
+
+/*=========================================*/
+.summary_container {
+  padding-top: 10px;
+  background-color: var(--block-2-background);
+}
+.summary_container-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--color-text-block-2-black);
+  text-align: center;
+
+  /*=========================================*/
+  /* text-shadow: 4px 3px 4px rgba(53, 51, 51, 0.445);  */
+}
+
+.summary_container-text {
+  position: relative; /**/
+
+  padding: 10px 25px;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-text-block-2-light);
+}
+
+.summary_container-text::before {
+  content: "•"; /* Встановлюємо символ для маркера */
+  color: var(--color-decorative); /* Встановлюємо колір маркера */
+  position: absolute; /* Робимо маркер абсолютним елементом */
+  left: 10px; /* Встановлюємо маркер зліва на відстані 5px */
+  top: 8%; /* Вирівнюємо маркер по вертикалі */
+  /* transform: translateY(-515%); */
+  /* Зміщуємо маркер вгору на половину його висоти, щоб він був вирівняний по центру */
+  font-size: 1.4em;
+  line-height: 0;
+}
+
+.project_container {
+  padding: 10px 10px 0 5px;
+  background-color: var(--block-2-background);
+}
+
+.project_title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--color-text-block-2-black);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project_list {
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+
+.project_item {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-decorative);
+  margin-bottom: 8px;
+}
+
+.project_link {
+  display: inline-block;
+  color: var(--color-text-block-2-link);
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 18px;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.project_link:hover,
+.project_link:focus {
+  transform: scale(1.2);
+}
+
+.project_text {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-text-block-2-light);
+  margin-bottom: 8px;
+}
+
+.container_education {
+  background-color: var(--block-2-background);
+}
+
+.education_title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--color-text-block-2-black);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.education_list {
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+
+.education_item {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-decorative);
+  margin-bottom: 8px;
+}
+
+.school {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--color-text-block-2-black);
+}
+
+.education_link {
+  display: inline-block;
+  color: var(--color-text-block-2-light);
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 18px;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.education_text {
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 14px;
+  color: var(--color-text-block-2-light);
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 375px) {
+  .summary_container-text::before {
+    top: 10.5%; /* Вирівнюємо маркер по вертикалі */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+  }
+  /* 
+  .hero
+  .junior {
+    width: 50%;
+  } */
+
+  .summary_container-text::before {
+    top: 11.5%; /* Вирівнюємо маркер по вертикалі */
+  }
+
+  /*===========================*/
+
+  .hero {
+    width: 41%;
+  }
+
+  .junior {
+    width: 59%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero {
+    width: 31%;
+  }
+
+  .junior {
+    width: 69%;
+  }
+
+  .summary_container-text::before {
+    top: 17%; /* Вирівнюємо маркер по вертикалі */
+  }
+  /*================================*/
+  .summary_container-text {
+    font-size: 16px;
+  }
+
+  .project_text {
+    font-size: 16px;
+  }
+
+  .education_text {
+    font-size: 16px;
+  }
+
+  .container_junior {
+    background-color: var(--block-2-background);
+    padding: 20px 30px 0;
+  }
+
+  .junior-container {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
