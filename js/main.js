@@ -1,8 +1,13 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", (event) => {
+  
+  const linkCover = document.querySelectorAll(".cover-letter_language-link");
   const links = document.querySelectorAll(".header_language-link");
+
+  const allLinks = [...linkCover, ...links];
+
   const pathName = window.location.pathname;
 
-  links.forEach((link, index) => {
+  allLinks.forEach((link, index) => {
     const currentHref = link.pathname;
     if (
       (pathName.endsWith("/") && index === 0) ||
@@ -11,4 +16,6 @@ window.onload = () => {
       link.classList.add("is-active-language");
     }
   });
-};
+});
+
+
