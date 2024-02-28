@@ -135,8 +135,7 @@ body {
 }
 
 .header_language-link.is-active-language,
-.header_language-link.is-active-language:hover,
-.header_language-link.is-active-language:focus {
+.header_language-link.is-active-language:hover {
   /* color: #ffffff;  */
   background-color: var(--background-languages-bg-active);
   transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease;
@@ -391,8 +390,7 @@ body {
   transition: transform 0.5s ease, color 0.5s ease;
 }
 
-.project_link:hover,
-.project_link:focus {
+.project_link:hover {
   transform: scale(1.2);
 }
 
