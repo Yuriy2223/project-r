@@ -152,12 +152,12 @@ body {
   font-weight: 500;
   line-height: 1.5;
   font-size: 22px;
-  color: var(--color-decorative);
+  color: var(--color-languages-dark);
 }
 
 .cover_letter-link:hover {
-  transform: scale(1.2);
-  transition: scale 1s ease;
+  color: var(--color-decorative);
+  transition: color 0.5s ease; 
 }
 
 .is-active-language {
