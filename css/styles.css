@@ -152,7 +152,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   font-size: 22px;
-  color: var(--color-languages-dark);
+  color: #807f7f;
 }
 
 .cover_letter-link:hover {
