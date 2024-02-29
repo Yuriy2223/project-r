@@ -127,7 +127,8 @@ body {
 .cover_letter-text-3,
 .cover_letter-text-4,
 .cover_letter-text-5,
-.cover_letter-text-6 {
+.cover_letter-text-6,
+.cover_letter-text-7{
   display: inline-block;
   margin-bottom: 20px;
 
